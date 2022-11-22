@@ -150,6 +150,20 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 ```
 
+```
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ cat package.json 
+{
+  "name": "oam-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "install": "bundle install --path bundle/cache"
+  },
+
+```
+
 You should be able to see the site in your browser at `http://localhost:3000`
 
 However, to get all functionality you will also need to point it at a running [Catalog API](https://github.com/hotosm/oam-catalog). By default the endpoint of the staging instance of the API will be used, however you can change the endpoint to a locally running API in `src/config/local.js`.
