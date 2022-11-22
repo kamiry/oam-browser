@@ -109,6 +109,36 @@ In Gemfile:
       ffi
 error Command failed with exit code 5.
 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+
+sudo apt install ruby-dev
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ yarn install
+yarn install v1.22.19
+warning package.json: No license field
+warning oam-browser@1.0.0: No license field
+[1/4] Resolving packages...
+success Already up-to-date.
+$ bundle install --path bundle/cache
+[DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set --local path 'bundle/cache'`, and stop using this flag
+Fetching gem metadata from https://rubygems.org/.............
+Using bundler 2.3.5
+Using chunky_png 1.3.4
+Using multi_json 1.11.0
+Using sass 3.4.13
+Using rb-fsevent 0.9.4
+Fetching ffi 1.9.8
+Using compass-import-once 1.0.5
+Using compass-core 1.0.3
+Installing ffi 1.9.8 with native extensions
+Fetching rb-inotify 0.9.5
+Installing rb-inotify 0.9.5
+Fetching compass 1.0.3
+Installing compass 1.0.3
+Bundle complete! 2 Gemfile dependencies, 10 gems now installed.
+Bundled gems are installed into `./bundle/cache`
+Post-install message from compass:
+    Compass is charityware. If you love it, please donate on our behalf at http://umdf.org/compass Thanks!
+Done in 13.85s.
+
 ```
 
 You should be able to see the site in your browser at `http://localhost:3000`
