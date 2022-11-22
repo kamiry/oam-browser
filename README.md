@@ -66,6 +66,20 @@ make: Leaving directory '/home/viplab/oam-browser-develop/node_modules/integer/b
 yarn start
 ```
 
+Download [v0.2-beta](https://github.com/hotosm/oam-browser/archive/refs/tags/v0.2-beta.zip)
+and build again.
+
+```bash
+yarn install
+[4/4] Building fresh packages...
+success Saved lockfile.
+$ bundle install --path bundle/cache
+/bin/sh: 1: bundle: not found
+error Command failed with exit code 127.
+
+
+yarn start
+```
 
 You should be able to see the site in your browser at `http://localhost:3000`
 
