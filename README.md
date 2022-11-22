@@ -32,6 +32,15 @@ sudo apt-get install -y nodejs
 
 ```
 
+clone the project's zip, unzip.
+```bash
+cd oam-browser-develop/
+
+yarn install
+yarn start
+```
+
+
 You should be able to see the site in your browser at `http://localhost:3000`
 
 However, to get all functionality you will also need to point it at a running [Catalog API](https://github.com/hotosm/oam-catalog). By default the endpoint of the staging instance of the API will be used, however you can change the endpoint to a locally running API in `src/config/local.js`.
