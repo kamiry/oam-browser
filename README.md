@@ -17,7 +17,7 @@ yarn install
 yarn start
 ```
 
-How to install Node: https://github.com/kamiry/oam-browser/edit/develop/README.md
+How to install Node: [安裝最新版Node.js & NPM於Ubuntu 20.04 LTS(PPA安裝)](https://blog.impochun.com/how-to-install-latest-nodejs-on-ubuntu/)
 ```bash
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
