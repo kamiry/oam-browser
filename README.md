@@ -31,12 +31,38 @@ sudo apt-get install -y nodejs
      sudo apt-get update && sudo apt-get install yarn
 
 ```
+check installed version
+
+```bash
+viplab@viplab-20221122:~/oam-browser-develop$ node -v
+v18.12.1
+viplab@viplab-20221122:~/oam-browser-develop$ npm -v
+8.19.2
+```
 
 clone the project's zip, unzip.
 ```bash
 cd oam-browser-develop/
 
 yarn install
+
+warning " > eslint-plugin-jsx-a11y@5.0.1" has incorrect peer dependency "eslint@^2.10.2 || 3.x".
+warning " > react-validation-mixin@4.2.0" has unmet peer dependency "joi@>=5.1.0".
+warning " > babel-preset-react-app@3.1.0" has unmet peer dependency "babel-runtime@^6.23.0".
+warning " > eslint-config-react-app@2.0.1" has unmet peer dependency "babel-eslint@^7.2.3".
+warning " > eslint-config-react-app@2.0.1" has incorrect peer dependency "eslint-plugin-jsx-a11y@^5.1.1".
+[4/4] Building fresh packages...
+[-/6] ⢀ waiting...
+[2/6] ⢀ node-sass
+[3/6] ⢀ integer
+[4/6] ⢀ farmhash
+warning Error running install script for optional dependency: "/home/viplab/oam-browser-develop/node_modules/integer: Command failed.
+
+make: *** [integer.target.mk:114: Release/obj.target/integer/src/integer.o] Error 1
+make: Leaving directory '/home/viplab/oam-browser-develop/node_modules/integer/build'
+
+
+
 yarn start
 ```
 
