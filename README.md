@@ -91,6 +91,16 @@ udo apt install ruby-bundler
 
 yarn install
 
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /home/viplab/oam-browser-0.2-beta/bundle/cache/ruby/3.0.0/gems/ffi-1.9.8/ext/ffi_c
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20221122-10209-dcngni.rb extconf.rb
+mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+
+You might have to install separate package for the ruby development
+environment, ruby-dev or ruby-devel for example.
+
+
 An error occurred while installing ffi (1.9.8), and Bundler cannot continue.
 
 In Gemfile:
