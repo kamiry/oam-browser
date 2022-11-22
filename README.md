@@ -80,6 +80,26 @@ error Command failed with exit code 127.
 
 yarn start
 ```
+bundle requires bunder => gem
+https://manpages.ubuntu.com/manpages/trusty/man1/bundle-install.1.html
+
+
+
+```bash
+sudo apt install ruby-rubygems
+udo apt install ruby-bundler
+
+yarn install
+
+An error occurred while installing ffi (1.9.8), and Bundler cannot continue.
+
+In Gemfile:
+  compass was resolved to 1.0.3, which depends on
+    rb-inotify was resolved to 0.9.5, which depends on
+      ffi
+error Command failed with exit code 5.
+info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+```
 
 You should be able to see the site in your browser at `http://localhost:3000`
 
