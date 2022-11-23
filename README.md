@@ -250,6 +250,18 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     /root/.npm/_logs/2022-11-23T02_25_01_496Z-debug-0.log
 
 ```
+try yarn start again
+
+```
+
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ yarn start
+yarn run v1.22.19
+$ NODE_PATH=src react-scripts start
+/bin/sh: 1: react-scripts: not found
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+```
 
 
 You should be able to see the site in your browser at `http://localhost:3000`
