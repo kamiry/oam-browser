@@ -163,6 +163,94 @@ viplab@viplab-20221122:~/oam-browser-0.2-beta$ cat package.json
   },
 
 ```
+copy the package.json from the github
+```
+  "scripts": {
+    "postinstall": "[ -f src/config/local.js ] || echo 'module.exports = {};' > src/config/local.js",
+    "start": "NODE_PATH=src react-scripts start",
+    "build": "react-scripts build",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "lint": "eslint --ignore-pattern src/joi.js --ignore-pattern styles/ src/ test/",
+    "fix-lint": "eslint --ignore-pattern src/joi.js --fix --ignore-pattern styles/ src/ test/",
+    "test": "NODE_ENV=test NODE_PATH=src:test/specs mocha --opts test/specs/mocha.opts test/specs/*_spec.js"
+  },
+
+```
+Run again
+```
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ yarn start
+yarn run v1.22.19
+$ NODE_PATH=src react-scripts start
+/bin/sh: 1: react-scripts: not found
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+```
+google "/bin/sh: 1: react-scripts: not found"
+https://stackoverflow.com/questions/40546231/sh-react-scripts-command-not-found-after-running-npm-start
+Guess I should install create-react-app
+
+```
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ npm install -g create-react-app
+npm ERR! code EACCES
+npm ERR! syscall mkdir
+npm ERR! path /usr/lib/node_modules/create-react-app
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/create-react-app'
+
+```
+No root privilage, try again
+
+```
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ sudo npm install -g create-react-app
+[sudo] password for viplab: 
+npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap.
+
+added 67 packages, and audited 68 packages in 1s
+
+5 packages are looking for funding
+  run `npm fund` for details
+
+2 high severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+npm notice 
+npm notice New major version of npm available! 8.19.2 -> 9.1.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.1.2
+npm notice Run npm install -g npm@9.1.2 to update!
+npm notice 
+
+```
+the next command is not working
+```
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ sudo npm install --save react react-dom
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: oam-browser@2.0.0
+npm ERR! Found: eslint@4.19.1
+npm ERR! node_modules/eslint
+npm ERR!   dev eslint@"^4.10.0" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer eslint@"^2.10.2 || 3.x" from eslint-plugin-jsx-a11y@5.0.1
+npm ERR! node_modules/eslint-plugin-jsx-a11y
+npm ERR!   eslint-plugin-jsx-a11y@"5.0.1" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /root/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2022-11-23T02_25_01_496Z-debug-0.log
+
+```
+
 
 You should be able to see the site in your browser at `http://localhost:3000`
 
