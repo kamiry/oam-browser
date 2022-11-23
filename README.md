@@ -17,6 +17,8 @@ yarn install
 yarn start
 ```
 
+以下為安裝測試筆記。安裝環境 Ubuntu 20.04
+
 How to install Node: [安裝最新版Node.js & NPM於Ubuntu 20.04 LTS(PPA安裝)](https://blog.impochun.com/how-to-install-latest-nodejs-on-ubuntu/)
 ```bash
 sudo apt-get install curl
