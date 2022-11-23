@@ -262,6 +262,34 @@ error Command failed with exit code 127.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
 ```
+not working.
+add the --force as suggested by the above warning message.
+
+```
+viplab@viplab-20221122:~/oam-browser-0.2-beta$ npm install --save react react-dom react-scripts --force
+npm WARN using --force Recommended protections disabled.
+npm WARN ERESOLVE overriding peer dependency
+
+...
+npm ERR! Please make sure you are using a supported platform and node version. If you
+npm ERR! would like to compile fibers on this machine please make sure you have setup your
+npm ERR! build environment--
+npm ERR! Windows + OS X instructions here: https://github.com/nodejs/node-gyp
+npm ERR! Ubuntu users please run: `sudo apt-get install g++ build-essential`
+npm ERR! Alpine users please run: `sudo apk add python make g++`
+npm ERR! sh: 1: nodejs: not found
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/viplab/.npm/_logs/2022-11-23T02_31_28_427Z-debug-0.log
+
+```
+
+suggest by the error message
+```
+sudo apt-get install g++ build-essential
+
+```
+try again npm install, same message
 
 
 You should be able to see the site in your browser at `http://localhost:3000`
